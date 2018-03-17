@@ -31,7 +31,7 @@ class downloader(object):
 		for x in span[:5]:
 			self.info.append(x.string)
 		self.nums = len(a[12:448])
-		for each in a[12:448]: # a[12:448] : 过滤掉 'listmain' 头部的最新章节列表 （按不同小说调整）
+		for each in a[12:448]: # a[12:448] : 去除 'listmain' 头部的最新章节列表及无关章节
 			self.names.append(each.string)
 			self.urls.append(self.site + each.get('href'))
 
